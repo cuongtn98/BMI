@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h4>CÂN NẶNG CỦA BẠN (KG)</h4>
+<input type="text" placeholder="kg" value="" id="yourkg">
+<h4>CHIỀU CAO CỦA BẠN (M)</h4>
+<input type="text" placeholder="vd:1.70 = 170cm " value="" id="yourheight">
+<input type="button" value="check" onclick="check()">
+</body>
+<script>
+    function check() {
+        let kg = +document.getElementById('yourkg').value;
+        let height = +document.getElementById('yourheight').value;
+
+        let bmi = kg / ( height**2);
+
+        if (bmi > 18.5) {
+            alert("chỉ số BMI của bạn bình thường");
+        } else if (  bmi > 25.0) {
+            alert("chỉ số BMI của bạn cao hơn mức bình thường");
+        }else if( bmi < 18.0) {
+            alert("chỉ số BMI của bạn thấp hơn bình thường");
+        } else {
+            alert("Lỗi không xác định");
+        }
+
+    }
+
+</script>
+</html>
